@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { AiOutlineUser, AiOutlineFundProjectionScreen } from "react-icons/ai";
 
 function MyNavbar() {
   const [expanded, setExpanded] = useState(false);
@@ -13,7 +12,7 @@ function MyNavbar() {
   return (
     <Navbar expanded={expanded} expand="md" className="sticky-top">
       <Navbar.Brand as={Link} to="/">
-        My Portfolio
+     
       </Navbar.Brand>
       <Navbar.Toggle
         aria-controls="responsive-navbar-nav"
@@ -29,13 +28,13 @@ function MyNavbar() {
 
           <Nav.Item>
             <Nav.Link as={Link} to="/about" onClick={() => updateExpanded(false)}>
-              <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+              About
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
             <Nav.Link as={Link} to="/project" onClick={() => updateExpanded(false)}>
-              <AiOutlineFundProjectionScreen style={{ marginBottom: "2px" }} /> Projects
+              Projects
             </Nav.Link>
           </Nav.Item>
         </Nav>
